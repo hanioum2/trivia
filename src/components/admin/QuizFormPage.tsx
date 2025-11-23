@@ -28,11 +28,13 @@ export default function QuizFormPage() {
     scoreboard_background_image_path: null,
     scoreboard_gradient_color_1: '#667eea',
     scoreboard_gradient_color_2: '#764ba2',
+    scoreboard_logo_path: null,
   })
 
   const [backgroundImageFile, setBackgroundImageFile] = useState<File | null>(null)
   const [logoFile, setLogoFile] = useState<File | null>(null)
   const [scoreboardBackgroundImageFile, setScoreboardBackgroundImageFile] = useState<File | null>(null)
+  const [scoreboardLogoFile, setScoreboardLogoFile] = useState<File | null>(null)
 
   useEffect(() => {
     if (isEdit && id) {
@@ -61,7 +63,7 @@ export default function QuizFormPage() {
   const handleImageUpload = async (
     file: File,
     bucket: 'quiz-backgrounds' | 'quiz-logos',
-    field: 'background_image_path' | 'logo_path' | 'scoreboard_background_image_path'
+    field: 'background_image_path' | 'logo_path' | 'scoreboard_background_image_path' | 'scoreboard_logo_path'
   ) => {
     const fileName = `${Date.now()}-${file.name}`
     const { error } = await uploadImage(file, bucket, fileName)
@@ -89,6 +91,9 @@ export default function QuizFormPage() {
       }
       if (scoreboardBackgroundImageFile) {
         await handleImageUpload(scoreboardBackgroundImageFile, 'quiz-backgrounds', 'scoreboard_background_image_path')
+      }
+      if (scoreboardLogoFile) {
+        await handleImageUpload(scoreboardLogoFile, 'quiz-logos', 'scoreboard_logo_path')
       }
 
       // Save quiz
@@ -254,6 +259,21 @@ export default function QuizFormPage() {
                 onChange={(e) => handleInputChange('scoreboard_gradient_color_2', e.target.value)}
               />
             </div>
+          </div>
+        </div>
+
+        <div className="form-section">
+          <h2>Scoreboard Logo</h2>
+          <div className="form-group">
+            <label>Logo Image</label>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) => setScoreboardLogoFile(e.target.files?.[0] || null)}
+            />
+            {formData.scoreboard_logo_path && (
+              <small>Current: {formData.scoreboard_logo_path}</small>
+            )}
           </div>
         </div>
 

@@ -35,6 +35,7 @@ export interface QuizConfig {
   scoreboardBackgroundImageUrl: string | null;
   scoreboardGradientColor1: string; // Top-left color for scoreboard
   scoreboardGradientColor2: string; // Bottom-right color for scoreboard
+  scoreboardLogoUrl: string | null;
 }
 
 export interface Score {

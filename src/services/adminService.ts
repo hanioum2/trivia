@@ -12,6 +12,7 @@ export interface QuizFormData {
   scoreboard_background_image_path: string | null
   scoreboard_gradient_color_1: string
   scoreboard_gradient_color_2: string
+  scoreboard_logo_path: string | null
 }
 
 export async function getQuizzes() {

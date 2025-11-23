@@ -100,6 +100,21 @@ export async function getQuizConfig(quizId: string): Promise<QuizConfig | null> 
       scoreboardBackgroundImageUrl = imageData?.publicUrl || null
     }
 
+    // Get scoreboard logo URL from storage if it exists
+    let scoreboardLogoUrl: string | null = null
+    if (data.scoreboard_logo_path) {
+      // Remove bucket name from path if included
+      let logoPath = data.scoreboard_logo_path
+      if (logoPath.startsWith('quiz-logos/')) {
+        logoPath = logoPath.replace('quiz-logos/', '')
+      }
+      
+      const { data: logoData } = supabase.storage
+        .from('quiz-logos')
+        .getPublicUrl(logoPath)
+      scoreboardLogoUrl = logoData?.publicUrl || null
+    }
+
     return {
       id: data.id,
       title: data.title,
@@ -112,6 +127,7 @@ export async function getQuizConfig(quizId: string): Promise<QuizConfig | null> 
       scoreboardBackgroundImageUrl,
       scoreboardGradientColor1: data.scoreboard_gradient_color_1 || '#667eea',
       scoreboardGradientColor2: data.scoreboard_gradient_color_2 || '#764ba2',
+      scoreboardLogoUrl,
     }
   } catch (error) {
     console.error('Error in getQuizConfig:', error)

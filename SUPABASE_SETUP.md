@@ -19,6 +19,7 @@ CREATE TABLE quizzes (
   scoreboard_background_image_path TEXT,
   scoreboard_gradient_color_1 TEXT NOT NULL DEFAULT '#667eea',
   scoreboard_gradient_color_2 TEXT NOT NULL DEFAULT '#764ba2',
+  scoreboard_logo_path TEXT,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 ```

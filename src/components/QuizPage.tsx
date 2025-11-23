@@ -137,6 +137,7 @@ export default function QuizPage({ playerName, language, onComplete, config, qui
   const gradientColor1 = config?.gradientColor1 || '#667eea'
   const gradientColor2 = config?.gradientColor2 || '#764ba2'
   const backgroundImageUrl = config?.backgroundImageUrl
+  const buttonColorArabic = config?.buttonColorArabic || '#10b981'
 
   const backgroundStyle = backgroundImageUrl
     ? {
@@ -223,6 +224,7 @@ export default function QuizPage({ playerName, language, onComplete, config, qui
         <h2 
           className="question-text"
           dir={language === 'ar' ? 'rtl' : 'ltr'}
+          style={{ color: buttonColorArabic }}
         >
           {currentQuestion.question[language]}
         </h2>

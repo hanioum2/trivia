@@ -53,7 +53,7 @@ export default function ScoreboardPage() {
   const gradientColor1 = config?.scoreboardGradientColor1 || '#667eea'
   const gradientColor2 = config?.scoreboardGradientColor2 || '#764ba2'
   const backgroundImageUrl = config?.scoreboardBackgroundImageUrl
-  const logoUrl = config?.logoUrl
+  const logoUrl = config?.scoreboardLogoUrl
 
   const backgroundStyle = backgroundImageUrl
     ? {

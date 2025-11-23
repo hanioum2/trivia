@@ -54,7 +54,7 @@ export default function StartPage({ onStart, config }: StartPageProps) {
         />
       )}
       <div className="start-container">
-        <h1 className="start-title">{title}</h1>
+        <h1 className="start-title" style={{ color: buttonColorArabic }}>{title}</h1>
         <input
           type="text"
           className="name-input"
