@@ -64,7 +64,7 @@ export default function QuizFormPage() {
     field: 'background_image_path' | 'logo_path' | 'scoreboard_background_image_path'
   ) => {
     const fileName = `${Date.now()}-${file.name}`
-    const { data: url, error } = await uploadImage(file, bucket, fileName)
+    const { error } = await uploadImage(file, bucket, fileName)
     
     if (error) {
       alert('Error uploading image: ' + error.message)

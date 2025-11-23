@@ -17,6 +17,7 @@ export function useQuizQuestions(quizId: string | null) {
       try {
         setLoading(true)
         setError(null)
+        if (!quizId) return
         const quizQuestions = await getQuizQuestions(quizId)
         if (quizQuestions && quizQuestions.length > 0) {
           setQuestions(quizQuestions)

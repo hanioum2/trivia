@@ -1,5 +1,4 @@
 import { supabase } from '../lib/supabase'
-import { Question } from '../types'
 
 export interface QuizFormData {
   id: string
@@ -118,7 +117,7 @@ export async function deleteQuestion(questionId: number) {
 }
 
 export async function uploadImage(file: File, bucket: 'quiz-backgrounds' | 'quiz-logos', path: string) {
-  const { data, error } = await supabase.storage
+  const { error } = await supabase.storage
     .from(bucket)
     .upload(path, file, {
       cacheControl: '3600',

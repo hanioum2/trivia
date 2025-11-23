@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { QuizConfig, Score } from '../types'
+import { Score } from '../types'
 import { useQuizConfig } from '../hooks/useQuizConfig'
 import { subscribeToScores } from '../services/scoreService'
 import './ScoreboardPage.css'
