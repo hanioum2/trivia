@@ -18,7 +18,7 @@ export function useQuizConfig(quizId: string | null) {
         setLoading(true)
         setError(null)
         if (!quizId) return
-        const quizConfig = await getQuizConfig(quizId)
+        const quizConfig = await getQuizConfig(quizId as string)
         if (quizConfig) {
           setConfig(quizConfig)
         } else {

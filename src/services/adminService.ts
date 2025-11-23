@@ -117,7 +117,7 @@ export async function deleteQuestion(questionId: number) {
 }
 
 export async function uploadImage(file: File, bucket: 'quiz-backgrounds' | 'quiz-logos', path: string) {
-  const { error } = await supabase.storage
+  const { data: _data, error } = await supabase.storage
     .from(bucket)
     .upload(path, file, {
       cacheControl: '3600',
