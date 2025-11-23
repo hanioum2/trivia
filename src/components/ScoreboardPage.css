@@ -1,0 +1,184 @@
+.scoreboard-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.scoreboard-logo {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  max-width: 210px;
+  max-height: 105px;
+  object-fit: contain;
+  z-index: 10;
+}
+
+.scoreboard-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: 2rem 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  animation: titleSlideIn 0.6s ease-out;
+}
+
+@keyframes titleSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scoreboard-container {
+  width: 80%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: containerSlideIn 0.8s ease-out;
+}
+
+@keyframes containerSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.no-scores {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #666;
+  padding: 3rem;
+}
+
+.scoreboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+}
+
+.scoreboard-table thead {
+  color: white;
+}
+
+.scoreboard-table th {
+  padding: 1.2rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.scoreboard-table th:first-child {
+  border-radius: 1rem 0 0 0;
+}
+
+.scoreboard-table th:last-child {
+  border-radius: 0 1rem 0 0;
+}
+
+.scoreboard-table tbody tr {
+  border-bottom: 2px solid #e9ecef;
+  transition: all 0.2s;
+}
+
+.scoreboard-table tbody tr:hover {
+  background: #f8f9fa;
+  transform: scale(1.01);
+}
+
+.scoreboard-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.scoreboard-table tbody tr.rank-1 {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.scoreboard-table tbody tr.rank-2 {
+  background: linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 100%);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.scoreboard-table tbody tr.rank-3 {
+  background: linear-gradient(135deg, #cd7f32 0%, #e6a857 100%);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.scoreboard-table td {
+  padding: 1.2rem;
+}
+
+.rank-cell {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100px;
+}
+
+.player-cell {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.score-cell {
+  text-align: center;
+  font-weight: 600;
+}
+
+.time-cell {
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .scoreboard-title {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+  
+  .scoreboard-logo {
+    max-width: 140px;
+    max-height: 70px;
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  .scoreboard-container {
+    padding: 1rem;
+  }
+  
+  .scoreboard-table {
+    font-size: 1rem;
+  }
+  
+  .scoreboard-table th {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+  
+  .scoreboard-table td {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+

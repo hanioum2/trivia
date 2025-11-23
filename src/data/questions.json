@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "question": {
+      "en": "What is the capital of France?",
+      "ar": "ما هي عاصمة فرنسا؟"
+    },
+    "options": {
+      "en": ["Paris", "London", "Berlin", "Madrid"],
+      "ar": ["باريس", "لندن", "برلين", "مدريد"]
+    },
+    "correctAnswer": 0
+  },
+  {
+    "id": 2,
+    "question": {
+      "en": "What is 2 + 2?",
+      "ar": "ما هو 2 + 2؟"
+    },
+    "options": {
+      "en": ["3", "4", "5", "6"],
+      "ar": ["3", "4", "5", "6"]
+    },
+    "correctAnswer": 1
+  },
+  {
+    "id": 3,
+    "question": {
+      "en": "Which planet is known as the Red Planet?",
+      "ar": "ما هو الكوكب المعروف بالكوكب الأحمر؟"
+    },
+    "options": {
+      "en": ["Venus", "Mars", "Jupiter", "Saturn"],
+      "ar": ["الزهرة", "المريخ", "المشتري", "زحل"]
+    },
+    "correctAnswer": 1
+  },
+  {
+    "id": 4,
+    "question": {
+      "en": "What is the largest ocean on Earth?",
+      "ar": "ما هو أكبر محيط على الأرض؟"
+    },
+    "options": {
+      "en": ["Atlantic", "Indian", "Arctic", "Pacific"],
+      "ar": ["الأطلسي", "الهندي", "القطبي", "الهادئ"]
+    },
+    "correctAnswer": 3
+  },
+  {
+    "id": 5,
+    "question": {
+      "en": "Who wrote 'Romeo and Juliet'?",
+      "ar": "من كتب 'روميو وجولييت'؟"
+    },
+    "options": {
+      "en": ["Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"],
+      "ar": ["تشارلز ديكنز", "وليام شكسبير", "جين أوستن", "مارك توين"]
+    },
+    "correctAnswer": 1
+  }
+]
+
