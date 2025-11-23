@@ -1,29 +1,31 @@
 .scoreboard-page {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  justify-content: center;
+  padding: 1rem;
   position: relative;
+  overflow: hidden;
 }
 
 .scoreboard-logo {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
-  max-width: 210px;
-  max-height: 105px;
+  top: 1rem;
+  right: 1rem;
+  max-width: 180px;
+  max-height: 90px;
   object-fit: contain;
   z-index: 10;
 }
 
 .scoreboard-title {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: white;
   text-align: center;
-  margin: 2rem 0;
+  margin: 0.5rem 0;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   animation: titleSlideIn 0.6s ease-out;
 }
@@ -41,11 +43,15 @@
 
 .scoreboard-container {
   width: 80%;
+  max-height: calc(100vh - 200px);
   background: rgba(255, 255, 255, 0.95);
-  border-radius: 1.5rem;
-  padding: 2rem;
+  border-radius: 1rem;
+  padding: 1rem;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   animation: containerSlideIn 0.8s ease-out;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 @keyframes containerSlideIn {
@@ -61,15 +67,15 @@
 
 .no-scores {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #666;
-  padding: 3rem;
+  padding: 2rem;
 }
 
 .scoreboard-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .scoreboard-table thead {
@@ -77,10 +83,10 @@
 }
 
 .scoreboard-table th {
-  padding: 1.2rem;
+  padding: 0.8rem;
   text-align: left;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .scoreboard-table th:first-child {
@@ -108,35 +114,35 @@
 .scoreboard-table tbody tr.rank-1 {
   background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .scoreboard-table tbody tr.rank-2 {
   background: linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 100%);
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
 }
 
 .scoreboard-table tbody tr.rank-3 {
   background: linear-gradient(135deg, #cd7f32 0%, #e6a857 100%);
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
 }
 
 .scoreboard-table td {
-  padding: 1.2rem;
+  padding: 0.6rem;
 }
 
 .rank-cell {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   text-align: center;
-  width: 100px;
+  width: 80px;
 }
 
 .player-cell {
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .score-cell {
