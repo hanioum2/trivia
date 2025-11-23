@@ -77,6 +77,13 @@
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+.question-text[dir="rtl"] {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  direction: rtl;
+  text-align: center;
+  unicode-bidi: embed;
+}
+
 .options-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -94,6 +101,13 @@
   cursor: pointer;
   transition: all 0.2s;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.option-button[dir="rtl"] {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  direction: rtl;
+  text-align: center;
+  unicode-bidi: embed;
 }
 
 .option-button:hover {

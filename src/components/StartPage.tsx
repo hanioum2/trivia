@@ -74,8 +74,9 @@ export default function StartPage({ onStart, config }: StartPageProps) {
             style={{ background: buttonColorArabic }}
             onClick={() => handleStart('ar')}
             disabled={!name.trim()}
+            dir="rtl"
           >
-            ابدأ بالعربية
+            ابدأ
           </button>
           <button
             className="start-button start-button-english"
@@ -83,7 +84,7 @@ export default function StartPage({ onStart, config }: StartPageProps) {
             onClick={() => handleStart('en')}
             disabled={!name.trim()}
           >
-            Start in English
+            Start
           </button>
         </div>
       </div>

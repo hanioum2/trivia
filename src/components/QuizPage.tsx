@@ -220,7 +220,10 @@ export default function QuizPage({ playerName, language, onComplete, config, qui
         </div>
       </div>
       <div className="question-container">
-        <h2 className="question-text">
+        <h2 
+          className="question-text"
+          dir={language === 'ar' ? 'rtl' : 'ltr'}
+        >
           {currentQuestion.question[language]}
         </h2>
         <div className="options-container">
@@ -228,6 +231,7 @@ export default function QuizPage({ playerName, language, onComplete, config, qui
             <button
               key={index}
               className="option-button"
+              dir={language === 'ar' ? 'rtl' : 'ltr'}
               onClick={() => handleAnswer(index)}
             >
               {option}
